@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/profile/profile",
+    "pages/handler/handler",
+    "pages/record/record",
+    "pages/address/address"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "jinpengh",
+    "navigationBarBackgroundColor": "#61BFAD",
+    "backgroundColor": "#F9F7E8",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#61BFAD",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabbar/shouye.png",
+        "selectedIconPath": "static/tabbar/shouye_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/handler/handler",
+        "iconPath": "static/tabbar/daiban.png",
+        "selectedIconPath": "static/tabbar/daiban_active.png",
+        "text": "待办"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "iconPath": "static/tabbar/jilu.png",
+        "selectedIconPath": "static/tabbar/jilu_active.png",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "static/tabbar/geren.png",
+        "selectedIconPath": "static/tabbar/geren_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
