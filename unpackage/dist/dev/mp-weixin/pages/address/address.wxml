@@ -1,1 +1,0 @@
-<view class="address-wrap"><view data-event-opts="{{[['tap',[['callPhone',['$event']]]]]}}" bindtap="__e">联系我们：13143352767</view><map class="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" show-compass="{{true}}" scale="{{scale}}"></map></view>

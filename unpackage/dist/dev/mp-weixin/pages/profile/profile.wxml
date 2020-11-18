@@ -1,1 +1,0 @@
-<view>个人中心<view data-event-opts="{{[['tap',[['clickContact',['$event']]]]]}}" class="contact" bindtap="__e">联系我们</view></view>

@@ -1,1 +1,0 @@
-<view class="handler-wrap"><block wx:for="{{todoList}}" wx:for-item="item" wx:for-index="index" wx:key="id"><view class="item">{{''+item.name+''}}</view></block></view>
