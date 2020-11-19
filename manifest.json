@@ -74,5 +74,22 @@
     },
     "uniStatistics": {  
         "enable": false
-    }
+    },
+		"h5": {
+			"devServer": {
+				"port": 19999,
+				"host": "0.0.0.0",
+				"proxy": {
+					"/spda-zuul-server": {
+						// 需要被代理的后台地址
+						"target": "http://172.16.0.140",
+						"changeOrigin": true,
+						"secure": false,
+						"pathRewrite": {
+							"^/spda-zuul-server": "/spda-zuul-server"
+						}
+					}
+			  }
+			}
+		}
 }

@@ -1,38 +1,61 @@
 <template>
 	<view class="index-wrap">
-		<view class="title">首页</view>
+		<Header class="title" name="首页"/>
 		<view class="welcome">欢迎使用uni-app</view>
 		<view class="desc">demo</view>
+		<view class="time">
+			{{nowDate}}
+		</view>
 	</view>
 </template>
 
 <script>
+	// 插件
+	import moment from "moment";
+	import { mapActions, mapState } from 'vuex';
+	
+	// 组件
+	import Header from '@/components/header/index.vue'
+	
 	export default {
+		components: {
+			Header
+		},
 		data() {
 			return {
+				nowDate: moment(new Date()).format("YYYY-MM-DD hh:mm:ss"),
+				nowDateObj: null
 			}
 		},
 		onLoad() {
 			this.getList();
+			this.updateDate();
 		},
+		
+		onUnload() {
+			clearInterval(this.nowDateObj)
+		},
+		
 		onReachBottom() {
 			console.log('到达底部');
 		},
+		
 		methods: {
+			...mapActions('index', ['getInfoList']),
+			
 			getList() {
-				this.$uniRequest({
-					url: 'index/getList',
-					method: 'POST',
-					data: {
-						pageSize: 10,
-						pageNo: 1,
-					}
-				}).then(res=>{
+				this.getInfoList({}).then(res=>{
 					console.log(res)
 				}).catch(err => {
 					console.log(err);
 				})
-			}
+			},
+			
+			updateDate() {
+				this.nowDateObj = setInterval(()=>{
+					this.nowDate = moment(new Date()).format("YYYY-MM-DD hh:mm:ss")
+				},1000)
+			},
 		}
 	}
 </script>
