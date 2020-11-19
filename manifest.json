@@ -81,8 +81,9 @@
       "host": "0.0.0.0",
       "proxy": {
         "/spda-zuul-server": {
+          // 换成公共部分
           // 需要被代理的后台地址
-          "target": "http://172.16.0.140",
+          "target": "http://**.**.**.**",
           "changeOrigin": true,
           "secure": false,
           "pathRewrite": {
