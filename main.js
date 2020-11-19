@@ -1,17 +1,17 @@
-import Vue from 'vue'
-import App from './App'
-import store from '@/store'
+import Vue from 'vue';
+import App from './App';
+import store from '@/store';
 
-import { uniRequest } from './util/request.js'
+import { uniRequest } from './util/request.js';
 
-Vue.prototype.$uniRequest = uniRequest
+Vue.prototype.$uniRequest = uniRequest;
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
-App.mpType = 'app'
+App.mpType = 'app';
 
 const app = new Vue({
-    ...App,
-		store
-})
-app.$mount()
+  ...App,
+  store,
+});
+app.$mount();

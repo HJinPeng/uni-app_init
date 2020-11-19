@@ -6,8 +6,8 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-	namespaced: true,
+  namespaced: true,
   modules: {
-		index
-	}
-})
+    index,
+  },
+});
